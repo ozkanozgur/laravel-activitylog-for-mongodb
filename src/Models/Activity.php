@@ -3,6 +3,7 @@
 namespace Spatie\Activitylog\Models;
 
 use Illuminate\Database\Eloquent\Builder;
+use MongoDB\Laravel\Eloquent\Model as MongoDB;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Support\Arr;
@@ -38,7 +39,7 @@ use Spatie\Activitylog\Contracts\Activity as ActivityContract;
  * @method static \Illuminate\Database\Eloquent\Builder|\Spatie\Activitylog\Models\Activity newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\Spatie\Activitylog\Models\Activity query()
  */
-class Activity extends Model implements ActivityContract
+class Activity extends MongoDB implements ActivityContract
 {
     public $guarded = [];
 
